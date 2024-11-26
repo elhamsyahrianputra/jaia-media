@@ -541,7 +541,7 @@ video {
   left: 0;
   z-index: 2;
   width: 100%;
-  mask-image: url("/public/img/logo/jaiamedia-logo.png");
+  mask-image: url("../../public/img/logo/jaiamedia-logo.png");
   mask-repeat: no-repeat;
   mask-position: center center;
   opacity: 0;
