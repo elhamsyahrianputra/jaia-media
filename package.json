@@ -1,0 +1,20 @@
+{
+  "name": "jaia-media",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch" : "sass --watch ./src/sass/main.scss ./dist/css/main.css",
+    "format" : "prettier --write '**/*.{scss,css}' ./index.html",
+    "lint:style": "stylelint '**/*.{scss,css}'"
+  },
+  "author": "Elham Syahrian Putra",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "sass": "^1.82.0",
+    "stylelint": "^16.11.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0"
+  }
+}
