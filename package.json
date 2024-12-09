@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "watch" : "sass --watch ./src/sass/main.scss ./dist/css/main.css",
-    "format" : "prettier --write '**/*.{scss,css}' ./index.html",
-    "lint:style": "stylelint '**/*.{scss,css}'"
+    "format" : "prettier --write './src/**/*.{scss,css}' ./index.html",
+    "lint:style": "stylelint './src/**/*.{scss,css}'"
   },
   "author": "Elham Syahrian Putra",
   "license": "ISC",
