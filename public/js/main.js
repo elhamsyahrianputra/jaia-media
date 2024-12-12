@@ -7,18 +7,18 @@ navbarToggles.forEach((navbarToggle) => {
   });
 });
 
-const counters = document.querySelectorAll('#statistic .value');
+// const counters = document.querySelectorAll('#statistic .value');
 
-counters.forEach((counter) => {
-  let dataCounter = Number(counter.dataset.counter);
-  let number = 0;
-  counter.addEventListener('click', () => {
-    while (number < dataCounter) {
-      setTimeout(() => {
-        number++
-      }, 1000);
-    }
+// counters.forEach((counter) => {
+//   let dataCounter = Number(counter.dataset.counter);
+//   let number = 0;
+//   counter.addEventListener('click', () => {
+//     while (number < dataCounter) {
+//       setTimeout(() => {
+//         number++
+//       }, 1000);
+//     }
 
-    counter.textContent = number;
-  })
-});
+//     counter.textContent = number;
+//   })
+// });
