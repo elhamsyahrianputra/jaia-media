@@ -116,7 +116,9 @@
                   <a class="overview-socmed-link" href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
               </div>
-              <a class="overview-button" href="#"><i class="fa-solid fa-phone"></i>Schedule a Call</a>
+              <div class="overview-schedule">
+                <a class="overview-button" href="#"><i class="fa-solid fa-phone"></i>Schedule a Call</a>
+              </div>
             </div>
           </div>
         </div>
@@ -230,19 +232,31 @@
           <div class="statistic-wrapper">
             <ul class="statistic-list">
               <li class="statistic-item">
-                <span class="value" data-counter="5">5+</span>
+                <div class="counter">
+                  <span class="value" data-counter="50">50</span>
+                  <span class="plus">+</span>
+                </div>
                 <h5 class="title">Years of<br />Expertise</h5>
               </li>
               <li class="statistic-item">
-                <span class="value" data-counter="50">50+</span>
-                <h5 class="title">Successfulbr<br />Campaigns</h5>
+                <div class="counter">
+                  <span class="value" data-counter="1000">1000</span>
+                  <span class="plus">+</span>
+                </div>
+                <h5 class="title">Successful<br />Campaigns</h5>
               </li>
               <li class="statistic-item">
-                <span class="value" data-counter="23">23+</span>
+                <div class="counter">
+                  <span class="value" data-counter="23">23</span>
+                  <span class="plus">+</span>
+                </div>
                 <h5 class="title">Served<br />Clients</h5>
               </li>
               <li class="statistic-item">
-                <span class="value" data-counter="80">80+</span>
+                <div class="counter">
+                  <span class="value" data-counter="80">80</span>
+                  <span class="plus">+</span>
+                </div>
                 <h5 class="title">Positive<br />Testimonials</h5>
               </li>
             </ul>
@@ -290,7 +304,8 @@
               </ul>
             </nav>
             <address class="footer-contact">
-              <div class="address">PT. Teknologi Masa Depan Jalan Ahmad Yani No. 8</div>
+              <div class="company">PT. Teknologi Masa Depan</div>
+              <div class="address">Jalan Ahmad Yani No. 8</div>
               <div class="email">jaiamedia@gmail.com</div>
               <div class="phone">+62 856 0001 1107</div>
             </address>
@@ -302,6 +317,10 @@
         </div>
       </div>
     </footer>
+    <div class="button-to-top">
+      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
     <script src="./public/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./public/vendors/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
@@ -316,8 +335,11 @@
           autoplayHoverPause: true,
           rtl: true,
           responsive: {
-            640: {
+            0: {
               items: 2,
+            },
+            640: {
+              items: 4,
             },
             768: {
               items: 4,
