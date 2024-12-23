@@ -66,26 +66,43 @@ counters.forEach((counter) => {
 });
 
 // Carousel
-const carouselItems = document.querySelectorAll('#client .client-carousel .carousel-item');
-const clientCarousel = document.querySelector('.client-carousel');
+// const carouselItems = document.querySelectorAll('#client .client-carousel .carousel-item');
+// const clientCarousel = document.querySelector('.client-carousel');
 
-carouselItems.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    carouselItems.forEach((i) => {
-      i.classList.remove('active', 'main');
+// carouselItems.forEach((item, index) => {
+//   item.addEventListener('click', () => {
+//     carouselItems.forEach((i) => {
+//       i.classList.remove('active', 'main');
+//     });
+
+//     item.classList.add('active', 'main');
+
+//     if (item.previousElementSibling) {
+//       item.previousElementSibling.classList.add('active');
+//     }
+//     if (item.nextElementSibling) {
+//       item.nextElementSibling.classList.add('active');
+//     }
+//     const translateValue = 25 - ((50) * (index));
+
+//     clientCarousel.style.transform = `translateX(${translateValue}%)`;
+//   });
+// });
+
+const cardLefts = document.querySelectorAll('#client .carousel-card .card-left');
+const cardRights = document.querySelectorAll('#client .carousel-card .card-right');
+
+document.addEventListener('DOMContentLoaded', () => {
+  cardLefts.forEach((cardLeft) => {
+    cardLeft.addEventListener('click', () => {
+      cardLeft.nextElementSibling.classList.add('show');
     });
+  });
 
-    item.classList.add('active', 'main');
-
-    if (item.previousElementSibling) {
-      item.previousElementSibling.classList.add('active');
-    }
-    if (item.nextElementSibling) {
-      item.nextElementSibling.classList.add('active');
-    }
-    const translateValue = 25 - ((50) * (index));
-
-    clientCarousel.style.transform = `translateX(${translateValue}%)`;
+  cardRights.forEach((cardRight) => {
+    cardRight.addEventListener('click', () => {
+      cardRight.classList.remove('show');
+    });
   });
 });
 
@@ -111,7 +128,6 @@ serviceButtons.forEach((button) => {
     });
   });
 });
-
 
 
 

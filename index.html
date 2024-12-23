@@ -17,9 +17,9 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="./public/vendors/fontawesome-6.7.1/css/all.min.css" />
 
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="./public/vendors/OwlCarousel2-2.3.4/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./public/vendors/OwlCarousel2-2.3.4/css/owl.theme.default.min.css" />
+    <!-- SplideJS -->
+    <link rel="stylesheet" href="./public/vendors/splide-4.1.3/css/splide.min.css" />
+    <link rel="stylesheet" href="./public/vendors/splide-4.1.3/css/themes/splide-default.min.css" />
   </head>
   <body>
     <header id="navbar">
@@ -164,35 +164,37 @@
       </div>
 
       <section id="client">
-        <div class="client-wrapper">
-          <div class="owl-carousel">
-            <div class="client-item">
-              <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
-            </div>
-            <div class="client-item">
-              <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
-            </div>
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track client-wrapper">
+            <ul class="splide__list client-list">
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/axl.png" alt="AXL Cofee" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/lava.png" alt="LAVA Bar & Kitchen" />
+              </li>
+              <li class="splide__slide client-item">
+                <img src="./public/img/clients/logo/levelone.png" alt="LEVELONE Resto Bar Caffeine" />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -265,6 +267,7 @@
         </div>
       </section>
     </main>
+
     <footer id="footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -323,39 +326,39 @@
     </div>
 
     <script src="./public/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./public/vendors/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+    <script src="./public/vendors/splide-4.1.3/js/splide.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $('.client-wrapper .owl-carousel').owlCarousel({
-          center: true,
-          loop: true,
-          dots: false,
+      document.addEventListener('DOMContentLoaded', () => {
+        new Splide('#client .splide', {
+          type: 'loop',
+          perPage: 2,
+          perMove: 1,
+          focus: 'center',
+          direction: 'rtl',
+          drag: 'free',
+          interval: 5000,
           autoplay: true,
-          autoplayTimeout: 5000,
-          autoplayHoverPause: true,
-          rtl: true,
-          responsive: {
-            0: {
-              items: 2,
-            },
+          arrows: false,
+          pagination: false,
+          mediaQuery: 'min',
+          breakpoints: {
             640: {
-              items: 4,
+              perPage: 4,
             },
             768: {
-              items: 4,
+              perPage: 4,
             },
             1024: {
-              items: 4,
+              perPage: 4,
             },
             1536: {
-              items: 4,
+              perPage: 4,
             },
             2000: {
-              items: 6,
+              perPage: 6,
             },
           },
-        });
+        }).mount();
       });
     </script>
   </body>
