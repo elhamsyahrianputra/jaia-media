@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -704,6 +705,40 @@ html body.overflow-hidden {
 }
 .button-to-top > a:hover {
   background-color: rgb(108.4794520548, 186.7260273973, 233.5205479452);
+}
+
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+.stars::before {
+  content: "★★★★★";
+  color: rgba(0, 0, 0, 0.15); /* warna bintang default/tidak aktif */
+}
+.stars::after {
+  content: "★★★★★";
+  color: #d58f27; /* warna kuning untuk bintang aktif */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  overflow: hidden;
+}
+.stars[data-value="1"]::after {
+  width: 20%;
+}
+.stars[data-value="2"]::after {
+  width: 40%;
+}
+.stars[data-value="3"]::after {
+  width: 60%;
+}
+.stars[data-value="4"]::after {
+  width: 80%;
+}
+.stars[data-value="5"]::after {
+  width: 100%;
 }
 
 #home .jumbotron-wrapper {
@@ -1414,9 +1449,11 @@ html body.overflow-hidden {
 }
 #media-consulting .overview-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 7rem 2rem;
+  gap: 3rem;
 }
 @media (min-width: 768px) {
   #media-consulting .overview-wrapper {
@@ -1427,6 +1464,11 @@ html body.overflow-hidden {
   #media-consulting .overview-wrapper {
     padding: 7rem 6rem;
   }
+}
+#media-consulting .overview-wrapper .overview-title {
+  color: #003059;
+  font-size: 2rem;
+  font-weight: 800;
 }
 #media-consulting .overview-wrapper .overview-content {
   font-size: 1rem;
@@ -1441,6 +1483,159 @@ html body.overflow-hidden {
   #media-consulting .overview-wrapper .overview-content {
     font-size: 1.5rem;
   }
+}
+#media-consulting #advantage {
+  background-color: rgba(0, 48, 89, 0.3882352941);
+  margin-bottom: 25rem;
+}
+#media-consulting #advantage .advantage-wrapper {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 12.5rem;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #003059;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: rgba(0, 48, 89, 0.5);
+  height: 3px;
+  width: 7.5rem;
+}
+@media (min-width: 768px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-title {
+    font-size: 3rem;
+  }
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list {
+  position: absolute;
+  top: 0rem;
+  top: 13.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item {
+  flex: 0 0 307px;
+  display: flex;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 2.75rem;
+  border-radius: 2rem;
+  background-color: #dee0e1;
+  box-shadow: 0px 0px 50px 10px rgba(46, 46, 46, 0.2), 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90px;
+  position: relative;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 48, 89, 0.5);
+  height: 3px;
+  width: 75px;
+  bottom: -1.5rem;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-icon > .icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-value {
+  text-align: center;
+  font-weight: 600;
+}
+#media-consulting .review-wrapper {
+  margin: 15rem 0;
+}
+#media-consulting .review-wrapper .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#media-consulting .review-wrapper .review-header .review-title {
+  color: #003059;
+  font-size: 3rem;
+  font-weight: 800;
+}
+#media-consulting .review-wrapper .review-header .review-nav {
+  display: flex;
+  gap: 3rem;
+  color: #003059;
+  font-size: 3rem;
+}
+#media-consulting .review-wrapper .review-header .review-nav .left-arrow:hover, #media-consulting .review-wrapper .review-header .review-nav .right-arrow:hover {
+  opacity: 0.75;
+}
+#media-consulting .review-wrapper .review-list {
+  margin-top: 10rem;
+  display: flex;
+}
+#media-consulting .review-wrapper .review-list .review-item {
+  flex: 1 0 0;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content {
+  flex: 1 0 0;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content::before {
+  content: "“";
+  display: block;
+  font-family: Istok Web;
+  color: #003059;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 0;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review {
+  font-size: 18px;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::before, #media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::after {
+  content: ' " ';
+  font-style: italic;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3rem;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .name {
+  color: #2e2e2e;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .company {
+  color: rgba(0, 0, 0, 0.3);
 }
 #media-consulting .client-wrapper .client-title {
   text-align: center;
@@ -1696,7 +1891,8 @@ html body.overflow-hidden {
   display: block;
   opacity: 1;
 }
-#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow, #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
+#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow,
+#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
   opacity: 0.85;
   height: 2.5rem;
   width: 2.5rem;
@@ -1704,18 +1900,21 @@ html body.overflow-hidden {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 640px) {
-  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow, #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
+  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow,
+  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
     height: 2.5rem;
     width: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow, #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
+  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow,
+  #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
-#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow:disabled, #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow:disabled {
+#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow:disabled,
+#media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .next-arrow:disabled {
   opacity: 0.3;
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category .arrows .prev-arrow {
