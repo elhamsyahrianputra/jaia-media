@@ -866,7 +866,7 @@ html body.overflow-hidden {
 #home .overview-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
+  margin-top: 5rem;
 }
 @media (min-width: 768px) {
   #home .overview-wrapper {
@@ -906,13 +906,14 @@ html body.overflow-hidden {
   }
 }
 #home .overview-wrapper .overview-content .overview-title {
-  margin-top: 1rem;
+  margin-top: 3rem;
   font-size: 2rem;
   font-weight: 900;
   color: #003059;
 }
 @media (min-width: 768px) {
   #home .overview-wrapper .overview-content .overview-title {
+    margin-top: 1rem;
     font-size: 2.25rem;
   }
 }
@@ -936,10 +937,10 @@ html body.overflow-hidden {
   text-align: justify;
   font-size: 18px;
   font-weight: 600;
-  line-height: 27px;
 }
 @media (min-width: 1280px) {
   #home .overview-wrapper .overview-content .overview-main .overview-text {
+    line-height: 32px;
     font-size: 20px;
   }
 }
@@ -999,7 +1000,7 @@ html body.overflow-hidden {
   gap: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 2rem;
   transition: all 0.3s ease-in-out;
 }
@@ -1011,11 +1012,9 @@ html body.overflow-hidden {
 }
 #home .overview-wrapper .overview-content .overview-schedule .overview-button:hover {
   opacity: 0.6;
-  border-color: #003059;
-  color: #003059;
 }
 #home .vision-wrapper {
-  margin: 3rem 0;
+  margin: 8rem 0;
 }
 @media (min-width: 768px) {
   #home .vision-wrapper {
@@ -1062,12 +1061,10 @@ html body.overflow-hidden {
 #home .vision-wrapper .vision-item .vision-value {
   color: #2e2e2e;
   font-size: 1rem;
-  line-height: 1.25rem;
   font-weight: 600;
 }
 @media (min-width: 1024px) {
   #home .vision-wrapper .vision-item .vision-value {
-    line-height: 1.5rem;
     font-size: 1.25rem;
   }
 }
@@ -1121,9 +1118,14 @@ html body.overflow-hidden {
   background-color: black;
   padding: 1.5rem 0;
 }
+@media (min-width: 768px) {
+  #home .client-wrapper {
+    padding: 4rem 0;
+  }
+}
 @media (min-width: 1280px) {
   #home .client-wrapper {
-    padding: 5rem 0;
+    padding: 6rem 0;
   }
 }
 #home .client-wrapper .client-item {
@@ -1152,7 +1154,17 @@ html body.overflow-hidden {
 #home #service {
   margin-top: -2px;
   background-color: black;
-  padding-bottom: 120px;
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  #home #service {
+    padding: 8rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  #home #service {
+    padding: 10rem 0;
+  }
 }
 #home #service .service-wrapper .service-title {
   color: #dee0e1;
@@ -1189,14 +1201,26 @@ html body.overflow-hidden {
   }
 }
 #home #service .service-wrapper .service-list .service-item .service-card {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(64, 166, 227, 0.3);
   height: 240px;
   width: 100%;
   border-radius: 1rem;
   padding: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#home #service .service-wrapper .service-list .service-item .service-card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
 }
 @media (min-width: 768px) {
   #home #service .service-wrapper .service-list .service-item .service-card {
@@ -1215,9 +1239,11 @@ html body.overflow-hidden {
   }
 }
 #home #service .service-wrapper .service-list .service-item .service-card .service-name {
+  position: relative;
+  z-index: 2;
   text-align: center;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #dee0e1;
 }
 @media (min-width: 1280px) {
@@ -1602,11 +1628,19 @@ html body.overflow-hidden {
 #media-consulting .client-wrapper .client-content .client-carousel .carousel-item .carousel-card .card-right .card-footer .card-link:hover > .lines > .line:last-child {
   width: 0.5rem;
 }
+#media-consulting .plan-wrapper {
+  margin: 5rem 0;
+}
 #media-consulting .plan-wrapper .plan-title {
   color: #003059;
   font-size: 1.75rem;
   font-weight: 900;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  #media-consulting .plan-wrapper .plan-title {
+    font-size: 3rem;
+  }
 }
 #media-consulting .plan-wrapper .plan-service {
   margin-top: 2rem;
@@ -1628,6 +1662,13 @@ html body.overflow-hidden {
   box-shadow: 0 0 20px 0 rgba(46, 46, 46, 0.1);
   transition: background-color 0.3s ease-in-out;
 }
+@media (min-width: 1024px) {
+  #media-consulting .plan-wrapper .plan-service .service-list .service-item .service-button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+  }
+}
 #media-consulting .plan-wrapper .plan-service .service-list .service-item .service-button:hover {
   color: #003059;
   background-color: rgba(0, 48, 89, 0.2);
@@ -1641,6 +1682,11 @@ html body.overflow-hidden {
   display: none;
   opacity: 0;
   transition: opacity 1s ease;
+}
+@media (min-width: 1024px) {
+  #media-consulting .plan-wrapper .category-wrapper .plan-category {
+    margin-top: 5rem;
+  }
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category > hr {
   margin: 2rem 0;
