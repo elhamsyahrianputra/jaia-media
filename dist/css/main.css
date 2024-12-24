@@ -1448,35 +1448,47 @@ html body.overflow-hidden {
   }
 }
 #media-consulting .overview-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 7rem 2rem;
-  gap: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
 }
 @media (min-width: 768px) {
   #media-consulting .overview-wrapper {
-    padding: 7rem 5rem;
+    padding-bottom: 12rem;
   }
 }
 @media (min-width: 1024px) {
   #media-consulting .overview-wrapper {
-    padding: 7rem 6rem;
+    paddin-bottom: 15rem;
   }
 }
 #media-consulting .overview-wrapper .overview-title {
   color: #003059;
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.75rem;
   font-weight: 800;
 }
+@media (min-width: 768px) {
+  #media-consulting .overview-wrapper .overview-title {
+    font-size: 2rem;
+  }
+}
 #media-consulting .overview-wrapper .overview-content {
+  margin-top: 3rem;
+  font-size: 0.875rem;
   font-size: 1rem;
   text-align: center;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  #media-consulting .overview-wrapper .overview-content {
+    font-size: 1.25rem;
+    padding: 0rem 5rem;
+  }
 }
 @media (min-width: 1024px) {
   #media-consulting .overview-wrapper .overview-content {
-    font-size: 1.25rem;
+    padding: 0rem 6rem;
   }
 }
 @media (min-width: 1280px) {
@@ -1486,7 +1498,12 @@ html body.overflow-hidden {
 }
 #media-consulting #advantage {
   background-color: rgba(0, 48, 89, 0.3882352941);
-  margin-bottom: 25rem;
+  margin-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  #media-consulting #advantage {
+    margin-bottom: 25rem;
+  }
 }
 #media-consulting #advantage .advantage-wrapper {
   position: relative;
@@ -1521,24 +1538,54 @@ html body.overflow-hidden {
   }
 }
 #media-consulting #advantage .advantage-wrapper .advantage-list {
-  position: absolute;
-  top: 0rem;
-  top: 13.5rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 3rem;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list {
+    width: 100%;
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list {
+    gap: 3rem;
+  }
 }
 #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item {
-  flex: 0 0 307px;
-  display: flex;
+  flex: 1 0 0;
+  max-width: 270px;
+}
+@media (min-width: 768px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item {
+    max-width: 307px;
+  }
 }
 #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card {
   display: flex;
+  height: 100%;
   flex-direction: column;
-  padding: 3.5rem 2.75rem;
+  padding: 3.5rem 1.25rem;
   border-radius: 2rem;
   background-color: #dee0e1;
   box-shadow: 0px 0px 50px 10px rgba(46, 46, 46, 0.2), 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card {
+    padding: 2.5rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card {
+    padding: 3.5rem 2.75rem;
+  }
 }
 #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main {
   display: flex;
@@ -1551,6 +1598,11 @@ html body.overflow-hidden {
   align-items: center;
   height: 90px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-icon {
+    height: 90px;
+  }
 }
 #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-icon::after {
   content: "";
@@ -1569,73 +1621,6 @@ html body.overflow-hidden {
 #media-consulting #advantage .advantage-wrapper .advantage-list .advantage-item .advantage-card .card-main .card-value {
   text-align: center;
   font-weight: 600;
-}
-#media-consulting .review-wrapper {
-  margin: 15rem 0;
-}
-#media-consulting .review-wrapper .review-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#media-consulting .review-wrapper .review-header .review-title {
-  color: #003059;
-  font-size: 3rem;
-  font-weight: 800;
-}
-#media-consulting .review-wrapper .review-header .review-nav {
-  display: flex;
-  gap: 3rem;
-  color: #003059;
-  font-size: 3rem;
-}
-#media-consulting .review-wrapper .review-header .review-nav .left-arrow:hover, #media-consulting .review-wrapper .review-header .review-nav .right-arrow:hover {
-  opacity: 0.75;
-}
-#media-consulting .review-wrapper .review-list {
-  margin-top: 10rem;
-  display: flex;
-}
-#media-consulting .review-wrapper .review-list .review-item {
-  flex: 1 0 0;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-content {
-  flex: 1 0 0;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-content::before {
-  content: "“";
-  display: block;
-  font-family: Istok Web;
-  color: #003059;
-  font-size: 96px;
-  font-weight: 700;
-  line-height: 0;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review {
-  font-size: 18px;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::before, #media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::after {
-  content: ' " ';
-  font-style: italic;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.3rem;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .name {
-  color: #2e2e2e;
-}
-#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .company {
-  color: rgba(0, 0, 0, 0.3);
 }
 #media-consulting .client-wrapper .client-title {
   text-align: center;
@@ -1822,6 +1807,144 @@ html body.overflow-hidden {
 }
 #media-consulting .client-wrapper .client-content .client-carousel .carousel-item .carousel-card .card-right .card-footer .card-link:hover > .lines > .line:last-child {
   width: 0.5rem;
+}
+#media-consulting .review-wrapper {
+  margin: 10rem 0;
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper {
+    margin: 12rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper {
+    margin: 15rem 0;
+  }
+}
+#media-consulting .review-wrapper .review-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  #media-consulting .review-wrapper .review-header {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  #media-consulting .review-wrapper .review-header {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper .review-header {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper .review-header {
+    margin-bottom: 6rem;
+  }
+}
+#media-consulting .review-wrapper .review-header .review-title {
+  color: #003059;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #media-consulting .review-wrapper .review-header .review-title {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper .review-header .review-title {
+    font-size: 3rem;
+  }
+}
+#media-consulting .review-wrapper .review-header .review-nav {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  color: #003059;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  #media-consulting .review-wrapper .review-header .review-nav {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  #media-consulting .review-wrapper .review-header .review-nav {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .review-wrapper .review-header .review-nav {
+    font-size: 2rem;
+  }
+}
+#media-consulting .review-wrapper .review-header .review-nav .left-arrow,
+#media-consulting .review-wrapper .review-header .review-nav .right-arrow {
+  opacity: 1;
+  position: static;
+  transform: translateY(0);
+}
+#media-consulting .review-wrapper .review-header .review-nav .left-arrow:hover,
+#media-consulting .review-wrapper .review-header .review-nav .right-arrow:hover {
+  opacity: 0.75;
+}
+#media-consulting .review-wrapper .review-header .review-nav .left-arrow:disabled,
+#media-consulting .review-wrapper .review-header .review-nav .right-arrow:disabled {
+  opacity: 0.3;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content {
+  flex: 1 0 0;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content::before {
+  content: "“";
+  display: block;
+  font-family: Istok Web;
+  color: #003059;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 0;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review {
+  font-size: 18px;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::before, #media-consulting .review-wrapper .review-list .review-item .review-card .card-content .review::after {
+  content: ' " ';
+  font-style: italic;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer {
+  display: flex;
+  flex-direction: column;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3rem;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .name {
+  color: #2e2e2e;
+}
+#media-consulting .review-wrapper .review-list .review-item .review-card .card-footer .card-user > .company {
+  color: rgba(0, 0, 0, 0.3);
 }
 #media-consulting .plan-wrapper {
   margin: 5rem 0;

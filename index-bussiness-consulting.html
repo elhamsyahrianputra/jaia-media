@@ -283,58 +283,74 @@
 
       <section id="review">
         <div class="container">
-          <div class="review-wrapper">
+          <div class="review-wrapper splide">
             <div class="review-header">
               <h2 class="review-title">Words From Our Clients</h2>
-              <div class="review-nav">
-                <button type="button" class="left-arrow"><i class="fa-solid fa-angles-left"></i></button>
-                <button type="button" class="right-arrow"><i class="fa-solid fa-angles-right"></i></button>
+              <div class="splide__arrows arrows review-nav">
+                <button type="button" class="splide__arrow splide__arrow--prev left-arrow"><i class="fa-solid fa-angles-left"></i></button>
+                <button type="button" class="splide__arrow splide__arrow--next right-arrow"><i class="fa-solid fa-angles-right"></i></button>
               </div>
             </div>
-            <ul class="review-list">
-              <li class="review-item">
-                <div class="review-card">
-                  <div class="card-content">
-                    <p class="review">Business consulting services helped improve company efficiency and growth through expert analysis and practical solutions</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-user">
-                      <span class="name">Andi Pratama</span>
-                      <span class="company">PT. Sukses Abadi</span>
+            <div class="splide__track">
+              <ul class="review-list splide__list">
+                <li class="review-item splide__slide">
+                  <div class="review-card">
+                    <div class="card-content">
+                      <p class="review">Business consulting services helped improve company efficiency and growth through expert analysis and practical solutions</p>
                     </div>
-                    <div class="stars" data-value="5"></div>
-                  </div>
-                </div>
-              </li>
-              <li class="review-item">
-                <div class="review-card">
-                  <div class="card-content">
-                    <p class="review">Business consulting services enhance company efficiency and growth through expert analysis and practical solutions</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-user">
-                      <span class="name">Rina Wijaya</span>
-                      <span class="company">PT. Maju Bersama</span>
+                    <div class="card-footer">
+                      <div class="card-user">
+                        <span class="name">Andi Pratama</span>
+                        <span class="company">PT. Sukses Abadi</span>
+                      </div>
+                      <div class="stars" data-value="5"></div>
                     </div>
-                    <div class="stars" data-value="4"></div>
                   </div>
-                </div>
-              </li>
-              <li class="review-item">
-                <div class="review-card">
-                  <div class="card-content">
-                    <p class="review">Consulting services for businesses improve operational efficiency and foster growth by providing expert analysis and actionable solutions</p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-user">
-                      <span class="name">Budi Santoso</span>
-                      <span class="company">PT. Karya Sejahtera</span>
+                </li>
+                <li class="review-item splide__slide">
+                  <div class="review-card">
+                    <div class="card-content">
+                      <p class="review">Business consulting services enhance company efficiency and growth through expert analysis and practical solutions</p>
                     </div>
-                    <div class="stars" data-value="3"></div>
+                    <div class="card-footer">
+                      <div class="card-user">
+                        <span class="name">Rina Wijaya</span>
+                        <span class="company">PT. Maju Bersama</span>
+                      </div>
+                      <div class="stars" data-value="4"></div>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li class="review-item splide__slide">
+                  <div class="review-card">
+                    <div class="card-content">
+                      <p class="review">By offering expert analysis and actionable strategies, consulting services help businesses improve efficiency and achieve growth.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="card-user">
+                        <span class="name">Dewi Lestari</span>
+                        <span class="company">PT. PT. Mitra Sejahtera</span>
+                      </div>
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="review-item splide__slide">
+                  <div class="review-card">
+                    <div class="card-content">
+                      <p class="review">Consulting services for businesses improve operational efficiency and foster growth by providing expert analysis and actionable solutions</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="card-user">
+                        <span class="name">Budi Santoso</span>
+                        <span class="company">PT. Karya Sejahtera</span>
+                      </div>
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -430,6 +446,22 @@
             },
             1536: {
               fixedWidth: '45%',
+            },
+          },
+        }).mount();
+
+        new Splide('#review .review-wrapper', {
+          mediaQuery: 'min',
+          breakpoints: {
+            640: {
+              gap: '3rem',
+              perPage: 2,
+            },
+            1024: {
+              perPage: 2,
+            },
+            1280: {
+              perPage: 3,
             },
           },
         }).mount();
