@@ -1558,10 +1558,21 @@ html body.overflow-hidden {
 }
 #media-consulting .introduce-wrapper .introduce-content {
   display: flex;
+  flex-direction: column;
   margin-top: 6rem;
 }
+@media (min-width: 1024px) {
+  #media-consulting .introduce-wrapper .introduce-content {
+    flex-direction: row;
+  }
+}
 #media-consulting .introduce-wrapper .introduce-content .introduce-card {
-  padding: 0 4rem;
+  padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-card {
+    padding: 0 4rem;
+  }
 }
 #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-tagline {
   color: #003059;
@@ -2214,7 +2225,7 @@ html body.overflow-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 #media-consulting .plan-wrapper {
-  margin: 5rem 0;
+  margin: 0 0;
 }
 #media-consulting .plan-wrapper .plan-title {
   text-transform: capitalize;
@@ -2267,8 +2278,8 @@ html body.overflow-hidden {
   background-color: #003059;
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category {
-  opacity: 0;
-  height: 0;
+  opacity: 1;
+  height: auto;
   margin-top: 0;
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category.active {
@@ -2544,7 +2555,13 @@ html body.overflow-hidden {
 }
 #media-consulting .contact-wrapper .contact-content {
   display: flex;
+  flex-direction: column;
   position: relative;
+}
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper .contact-content {
+    flex-direction: row;
+  }
 }
 #media-consulting .contact-wrapper .contact-content .contact-card {
   order: 2;
@@ -2584,9 +2601,13 @@ html body.overflow-hidden {
 #media-consulting .contact-wrapper .contact-content .contact-maps {
   order: 1;
   transform-origin: left;
-  transform: scale(1.2);
   flex: 0 0 50%;
   box-shadow: 4px 4px 20px 7px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper .contact-content .contact-maps {
+    transform: scale(1.2);
+  }
 }
 #media-consulting .contact-wrapper .contact-content .contact-maps > iframe {
   width: 100%;

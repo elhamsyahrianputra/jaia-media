@@ -116,10 +116,19 @@
 
     .introduce-content {
       display: flex;
+      flex-direction: column;
       margin-top: 6rem;
 
+      @include media-query('lg') {
+        flex-direction: row;
+      }
+
       .introduce-card {
-        padding: 0 4rem;
+        padding: 0 1rem;
+
+        @include media-query('lg') {
+          padding: 0 4rem;
+        }
 
         .introduce-tagline {
           color: $blue;
@@ -856,7 +865,7 @@
   }
 
   .plan-wrapper {
-    margin: 5rem 0;
+    margin: 0 0;
 
     .plan-title {
       text-transform: capitalize;
@@ -915,8 +924,8 @@
 
     .category-wrapper {
       .plan-category {
-        opacity: 0;
-        height: 0;
+        opacity: 1;
+        height: auto;
         margin-top: 0;
 
         &.active {
@@ -1247,7 +1256,12 @@
     
     .contact-content {
       display: flex;
+      flex-direction: column;
       position: relative;
+
+      @include media-query('lg') {
+        flex-direction: row;
+      }
 
       .contact-card {
         order: 2;
@@ -1299,9 +1313,12 @@
       .contact-maps {
         order: 1;
         transform-origin: left;
-        transform: scale(1.2);
         flex: 0 0 50%;
         box-shadow: 4px 4px 20px 7px rgba($color: #000000, $alpha: 25%);
+
+        @include media-query('lg') {
+          transform: scale(1.2);
+        }
 
         & > iframe {
           width: 100%;

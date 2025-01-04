@@ -19,6 +19,9 @@
     <!-- SplideJS -->
     <link rel="stylesheet" href="./public/vendors/splide-4.1.3/css/splide.min.css" />
     <link rel="stylesheet" href="./public/vendors/splide-4.1.3/css/themes/splide-default.min.css" />
+
+    <!-- AoS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header id="navbar">
@@ -103,10 +106,10 @@
       <section id="overview">
         <div class="container">
           <div class="overview-wrapper">
-            <div class="overview-illustration">
+            <div class="overview-illustration" data-aos="fade-right" data-aos-duration="1000">
               <img src="./public/img/illustrations/overview.jpg" alt="Overview" />
             </div>
-            <div class="overview-content">
+            <div class="overview-content"  data-aos="fade-left" data-aos-duration="1000">
               <h3 class="overview-title">KNOW US MORE</h3>
               <div class="overview-main">
                 <p class="overview-text">JAIA Establishment is a multifaceted holding company dedicated to fostering growth and innovation across diverse sectors. With its headquarters in Central Java, Indonesia, JAIA Establishment is the proud parent company of two dynamic sister entities: a social media consulting firm and a food and beverage (F&B) business.</p>
@@ -128,7 +131,7 @@
 
       <section id="vision">
         <div class="container">
-          <ul class="vision-wrapper">
+          <ul class="vision-wrapper"  data-aos="fade-up" data-aos-duration="1000">
             <li class="vision-item">
               <div class="vision-title">OUR VISION</div>
               <div class="vision-value">is become the best solution for digital needs in the era of digitalization</div>
@@ -258,7 +261,7 @@
 
       <section id="service">
         <div class="container">
-          <div class="service-wrapper">
+          <div class="service-wrapper" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="service-title">OUR SERVICE</h2>
 
             <ul class="service-list">
@@ -401,7 +404,15 @@
     </div>
 
     <script src="./public/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./public/vendors/splide-4.1.3/js/splide.min.js"></script>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        AOS.init();
+      });
+    </script>
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         new Splide('#client .splide', {
