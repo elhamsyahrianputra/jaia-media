@@ -1,0 +1,40 @@
+@use '../abstracts/breakpoints' as *;
+@use 'sass:map';
+@use 'sass:string';
+
+$container-padding: (
+  'sm': '4rem',
+  'md': '4rem',
+  'lg': '4rem',
+  'xl': '4rem',
+  '2xl': '4rem',
+);
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @each $name, $width in $breakpoints {
+    @include media-query($name) {
+      max-width: $width;
+
+      @each $media, $value in $container-padding {
+        @if $name == $media {
+          padding: 0 #{$value};
+        }
+      }
+    }
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+
+  @each $name, $width in $breakpoints {
+    @include media-query($name) {
+      max-width: $width;
+    }
+  }
+}

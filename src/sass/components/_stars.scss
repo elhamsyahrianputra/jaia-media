@@ -1,0 +1,36 @@
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+
+  &::before {
+    content: '★★★★★';
+    color: rgba($color: #000000, $alpha: 15%); /* warna bintang default/tidak aktif */
+  }
+
+  &::after {
+    content: '★★★★★';
+    color: #d58f27; /* warna kuning untuk bintang aktif */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &[data-value='1']::after {
+    width: 20%;
+  }
+  &[data-value='2']::after {
+    width: 40%;
+  }
+  &[data-value='3']::after {
+    width: 60%;
+  }
+  &[data-value='4']::after {
+    width: 80%;
+  }
+  &[data-value='5']::after {
+    width: 100%;
+  }
+}

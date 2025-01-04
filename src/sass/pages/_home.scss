@@ -1,0 +1,697 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+#home {
+  .jumbotron-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+    height: calc(100vh - 150px);
+    max-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+
+    @include media-query('sm') {
+      height: calc(100vh - 120px);
+    }
+
+    .slogan {
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 3rem;
+      color: $black;
+      margin-left: -2px;
+
+      .slogan-1 {
+        font-size: 50px;
+        width: fit-content;
+        padding: 0.5rem 1rem 0.5rem 0;
+        border-top-right-radius: 1rem;
+        background-color: $white;
+        position: relative;
+        z-index: 2;
+        margin-bottom: -2px;
+
+        @include media-query('md') {
+          font-size: 70px;
+        }
+
+        @include media-query('lg') {
+          font-size: 85px;
+        }
+
+        @include media-query('xl') {
+          font-size: 90px;
+          line-height: 3.75rem;
+        }
+
+        & > span {
+          font-size: 70px;
+          text-transform: capitalize;
+          font-family: 'Qwitcher Grypen', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+          @include media-query('md') {
+            font-size: 94px;
+          }
+
+          @include media-query('lg') {
+            padding: 1.5rem 1.5rem 1.5rem 0;
+            font-size: 110px;
+          }
+
+          @include media-query('xl') {
+            font-size: 120px;
+          }
+        }
+      }
+
+      .slogan-2 {
+        font-size: 50px;
+        width: fit-content;
+        padding: 0.5rem 1rem 0.5rem 0;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        background-color: $white;
+        margin-bottom: -2px;
+
+        @include media-query('md') {
+          font-size: 70px;
+          padding: 0.75rem 1rem 0.75rem 0;
+        }
+
+        @include media-query('lg') {
+          padding: 1.5rem 1.5rem 1.5rem 0;
+          font-size: 85px;
+        }
+
+        & > span {
+          color: $light-blue;
+          font-style: italic;
+        }
+      }
+    }
+
+    .name-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 3rem;
+      align-items: flex-end;
+      color: $black;
+      margin-right: -2px;
+
+      & > div:first-child {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 15%;
+        border-top-left-radius: 2rem;
+        background-color: $white;
+        padding: 0.5rem 0 0 1rem;
+        margin-bottom: -2px;
+
+        @include media-query('md') {
+          font-size: 60px;
+          padding: 0.75rem 0 0 1rem;
+        }
+
+        @include media-query('lg') {
+          font-size: 75px;
+          line-height: 60px;
+          padding: 1rem 0 0 1rem;
+        }
+
+        @include media-query('xl') {
+          font-size: 90px;
+          line-height: 75px;
+        }
+      }
+
+      & > div:last-child {
+        display: inline-block;
+        margin-bottom: -2px;
+        font-size: 30px;
+        border-top-left-radius: 2rem;
+        background-color: $white;
+        padding: 0.5rem 0 0.5rem 1rem;
+
+        @include media-query('md') {
+          padding: 0.75rem 0 0.5rem 1rem;
+          font-size: 36px;
+        }
+
+        @include media-query('lg') {
+          padding: 1rem 0 0.5rem 1rem;
+          font-size: 45px;
+        }
+
+        @include media-query('xl') {
+          font-size: 58px;
+        }
+      }
+    }
+  }
+
+  .overview-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+
+    @include media-query('md') {
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    .overview-illustration {
+      width: 100%;
+
+      @include media-query('md') {
+        width: 50%;
+      }
+
+      & > img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: 2rem;
+        object-position: right;
+        box-shadow: 0 4px 4px rgba($color: #000, $alpha: 20%);
+
+        @include media-query('md') {
+          height: 400px;
+        }
+
+        @include media-query('lg') {
+          height: 600px;
+        }
+      }
+    }
+
+    .overview-content {
+      @include media-query('md') {
+        width: 50%;
+      }
+
+      .overview-title {
+        margin-top: 3rem;
+        font-size: 2rem;
+        font-weight: 900;
+        color: $blue;
+
+        @include media-query('md') {
+          margin-top: 1rem;
+          font-size: 2.25rem;
+        }
+
+        @include media-query('xl') {
+          font-size: 3.25rem;
+        }
+      }
+
+      .overview-main {
+        display: flex;
+        flex-direction: column;
+
+        @include media-query('md') {
+          flex-direction: row;
+          gap: 3rem;
+        }
+
+        .overview-text {
+          color: $black;
+          text-align: justify;
+          font-size: 18px;
+          font-weight: 600;
+
+          @include media-query('xl') {
+            line-height: 32px;
+            font-size: 20px;
+          }
+        }
+
+        .overview-socmed {
+          color: black;
+          display: none;
+          margin-top: 1.5rem;
+          gap: 0.25rem;
+          justify-content: flex-end;
+          align-items: center;
+
+          @include media-query('lg') {
+            display: flex;
+            flex-direction: column;
+          }
+
+          & > span {
+            display: none;
+            height: 90px;
+            width: 3px;
+            background-color: $black;
+
+            @include media-query('md') {
+              display: block;
+            }
+          }
+
+          .overview-socmed-link {
+            font-size: 1.5rem;
+            transition: all 0.3s ease-in-out;
+
+            @include media-query('md') {
+              transform: rotate(90deg);
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
+
+      .overview-schedule {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+
+        @include media-query('md') {
+          margin-top: 2rem;
+          justify-content: flex-start;
+        }
+
+        .overview-button {
+          color: $white;
+          background-color: $blue;
+          display: inline-flex;
+          align-items: center;
+          gap: 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          padding: 0.75rem 1.25rem;
+          border-radius: 2rem;
+          transition: all 0.3s ease-in-out;
+
+          @include media-query('xl') {
+            font-size: 20px;
+            padding: 1rem 1.75rem;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  .vision-wrapper {
+    margin-bottom: 10rem;
+
+    .vision-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+
+
+      .vision-title {
+        flex: 0 0 40%;
+        color: $blue;
+        font-size: 1.25rem;
+        font-weight: 900;
+        transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        margin-right: 1.5rem;
+
+        @include media-query('md') {
+          font-size: 1.5rem;
+        }
+
+        @include media-query('lg') {
+          font-size: 2rem;
+        }
+
+        @include media-query('xl') {
+          flex: 0 0 45%;
+          font-size: 2.75rem;
+        }
+      }
+
+      .vision-value {
+        color: $black;
+        font-size: 1rem;
+        font-weight: 600;
+
+        @include media-query('lg') {
+          font-size: 1.25rem;
+        }
+
+        @include media-query('xl') {
+          flex: 0 0 55%;
+          font-size: 20px;
+        }
+      }
+
+      &:first-child {
+        border-bottom: none;
+      }
+
+      &:last-child {
+        border-top: none;
+      }
+
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 50%);
+      }
+    }
+  }
+
+  .marquee {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    background-color: $light-blue;
+
+    .marquee-text {
+      padding-right: 4rem;
+      white-space: nowrap;
+      font-size: 1.25rem;
+      font-weight: 500;
+      animation: marquee 25s linear infinite;
+
+      @include media-query('md') {
+        font-size: 1.5rem;
+      }
+
+      @include media-query('lg') {
+        font-size: 1.75rem;
+      }
+
+      @include media-query('xl') {
+        font-size: 2rem;
+      }
+
+      & > .bold {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .client-wrapper { 
+    background-color: black;
+    padding: 2rem 0;
+
+    @include media-query('md') {
+      padding: 3rem 0;
+    }
+
+    @include media-query('lg') {
+      padding: 5rem 0;
+    }
+
+    .client-item {
+      display: flex;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+
+      & > img {
+        max-height: 75px;
+        max-width: 125px;
+        object-fit: contain;
+        opacity: 0.6;
+        filter: grayscale(100%);
+
+        @include media-query('lg') {
+          max-height: 105px;
+          max-width: 175px;
+        }
+
+        @include media-query('xl') {
+          max-height: 135px;
+          max-width: 225px;
+        }
+      }
+    }
+  }
+
+  #service {
+    background-color: black;
+
+    .service-wrapper {
+      padding-bottom: 10rem;
+
+      .service-title {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 900;
+        border-bottom: 3px solid rgba($color: $white, $alpha: 50%);
+        margin-bottom: 3rem;
+
+        @include media-query('xl') {
+          font-size: 3rem;
+        }
+      }
+
+      .service-list {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        display: flex;
+        gap: 1rem 0;
+        flex-wrap: wrap;
+
+        @include media-query('xl') {
+          justify-content: space-between;
+        }
+
+        .service-item {
+          // background-color: #fff;
+          flex: 0 0 50%;
+          padding: 0 0.5rem;
+          
+          @include media-query('md') {
+            flex: 0 0 25%;
+          }
+          
+          .service-card {
+            aspect-ratio: 9 / 12;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            user-select: none;
+            border-radius: 1rem;
+            padding: 1rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            
+            &:hover {
+              &::after {
+                background-color: rgba($color: #000, $alpha: 60%);
+              }
+
+              .service-link {
+                bottom: 1rem;
+                opacity: 1;
+              }
+            }
+            
+            &::after {
+              position: absolute;
+              top: 0;
+              left: 0;
+              content: '';
+              background-color: rgba($color: $blue, $alpha: 60%);
+              height: 100%;
+              width: 100%;
+              transition: background-color 0.3s ease-in-out;
+            }
+
+            .service-name {
+              position: relative;
+              z-index: 2;
+              text-align: center;
+              font-size: 1.25rem;
+              font-weight: 600;
+              color: $white;
+              user-select: none;
+              touch-action: none;
+
+              @include media-query('sm') {
+                line-height: 1.5rem;
+              }
+
+              @include media-query('xl') {
+                font-size: 1.75rem;
+                font-weight: 500;
+                line-height: 2.25rem;
+              }
+            }
+
+            .service-link {
+              position: absolute;
+              bottom: -1rem;
+              z-index: 2;
+              font-size: 0.75rem;
+              color: $white;
+              opacity: 0;
+              transition: all 0.3s ease-in-out;
+
+              & > .lines {
+                display: flex;
+                justify-content: center;
+                gap: 0.25rem;
+
+                & > .line:first-child {
+                  height: 1.5px;
+                  width: 0.5rem;
+                  background-color: $white;
+                  border-radius: 3px;
+                  transition: all 0.3s ease-in-out;
+                }
+
+                & > .line:last-child {
+                  height: 1.5px;
+                  width: 2.5rem;
+                  background-color: $white;
+                  border-radius: 3px;
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+
+              &:hover {
+                & > .lines {
+                  & > .line:first-child {
+                    width: 2.5rem;
+                  }
+
+                  & > .line:last-child {
+                    width: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #statistic {
+    background-color: black;
+    background-image: url('../../public/img/illustrations/statistic.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-color: black;
+      opacity: 0.75;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .statistic-wrapper {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+
+      .statistic-list {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        gap: 0.75rem 0;
+
+        @include media-query('sm') {
+          flex-wrap: nowrap;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        @include media-query('md') {
+          gap: 1rem 0;
+        }
+
+        @include media-query('xl') {
+          justify-content: space-between;
+        }
+
+        .statistic-item {
+          flex: 0 0 50%;
+          padding-right: 0.75rem;
+          padding-left: 0.75rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          @include media-query('sm') {
+            flex: 0 0 25%;
+            padding-right: 0;
+            padding-left: 0;
+          }
+
+          @include media-query('xl') {
+            flex: none;
+          }
+
+          .counter {
+            display: flex;
+
+            & > .value,
+            & > .plus {
+              color: $white;
+              font-size: 3rem;
+              font-weight: 600;
+
+              @include media-query('lg') {
+                font-size: 4rem;
+              }
+
+              @include media-query('xl') {
+                font-size: 5.5rem;
+              }
+            }
+
+            & > .plus {
+              opacity: 0;
+              transition: opacity 0.3s 0.8s ease-in-out;
+
+              &.solid {
+                opacity: 1;
+              }
+            }
+          }
+
+          & > .title {
+            text-align: center;
+            display: inline-block;
+            color: $white;
+            font-weight: 500;
+
+            @include media-query('lg') {
+              font-size: 18px;
+            }
+
+            @include media-query('xl') {
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+html {
+  // scroll-behavior: smooth;
+
+  body {
+    background-color: $white;
+    overflow-x: hidden;
+
+    &.overflow-hidden {
+      overflow-y: hidden;
+
+      @include media-query('lg') {
+        overflow-y: auto;
+      }
+    }
+  }
+}

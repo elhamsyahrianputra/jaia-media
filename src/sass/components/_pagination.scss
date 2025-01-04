@@ -1,0 +1,12 @@
+@use '../abstracts/colors' as *;
+
+.splide__pagination {
+
+  .splide__pagination__page {
+    background-color: grey;
+
+    &.is-active {
+      background-color: $blue;
+    }
+  }
+}

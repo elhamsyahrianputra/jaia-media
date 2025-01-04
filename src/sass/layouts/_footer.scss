@@ -1,0 +1,109 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+@use 'sass:math';
+@use 'sass:color';
+
+#footer {
+  color: darken($color: $white, $amount: 20);
+  background-color: black;
+  font-weight: 500;
+
+  .footer-wrapper {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+
+    .footer-logo {
+      margin-bottom: 2rem;
+      img {
+        width: 90px;
+      }
+    }
+
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      @include media-query('lg') {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .footer-content {
+        @include media-query('lg') {
+          flex: 0 0 calc(5 / 12 * 100%);
+        }
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 2rem;
+
+        .nav-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          .nav-title {
+            font-size: 1.25rem;
+            color: $white;
+            font-weight: 700;
+
+            @include media-query('lg') {
+              margin-bottom: 0.25rem;
+            }
+          }
+
+          .nav-item {
+            .nav-link {
+              line-height: 1.5rem;
+              transition: opacity 0.3s ease-in-out;
+
+              &:hover {
+                opacity: 0.3;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-contact {
+        display: flex;
+        flex-direction: column;
+
+        .company {
+          color: $white;
+          font-size: 1.25em;
+          font-style: normal;
+          font-weight: 700;
+
+          @include media-query('lg') {
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+    }
+
+    .footer-copyright {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      @include media-query('lg') {
+        text-align: left;
+      }
+
+      a {
+        color: color.adjust($white, $lightness: -30%);
+        font-weight: 600;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

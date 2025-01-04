@@ -1,0 +1,22 @@
+// Colors
+
+// Preflight
+@use 'vendors/tailwind-preflight';
+
+// Base
+@use 'base/base';
+@use 'base/animation';
+
+// Layouts
+@use 'layouts/container';
+@use 'layouts/navbar';
+@use 'layouts/footer';
+
+// Components
+@use 'components/button-to-top';
+@use 'components/stars.scss';
+@use 'components/pagination';
+
+// Pages
+@use 'pages/home';
+@use 'pages/media-consulting';
