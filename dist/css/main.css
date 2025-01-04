@@ -2037,6 +2037,7 @@ html body.overflow-hidden {
 }
 #media-consulting .client-wrapper .client-more {
   margin-top: 5rem;
+  overflow: hidden;
 }
 #media-consulting .client-wrapper .client-more .more-title {
   color: #003059;
