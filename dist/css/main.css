@@ -706,7 +706,7 @@ html body.overflow-hidden {
   opacity: 0.3;
 }
 
-.button-to-top > a {
+.button-to-top {
   position: fixed;
   z-index: 9999;
   display: flex;
@@ -721,7 +721,7 @@ html body.overflow-hidden {
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
-.button-to-top > a:hover {
+.button-to-top:hover {
   background-color: rgb(108.4794520548, 186.7260273973, 233.5205479452);
 }
 
@@ -729,6 +729,7 @@ html body.overflow-hidden {
   position: relative;
   display: inline-block;
   font-size: 2rem;
+  width: fit-content;
 }
 .stars::before {
   content: "★★★★★";
@@ -1494,6 +1495,24 @@ html body.overflow-hidden {
     font-size: 4rem;
   }
 }
+#media-consulting .jumbotron-wrapper .jumbotron-title img {
+  max-width: 250px;
+}
+@media (min-width: 640px) {
+  #media-consulting .jumbotron-wrapper .jumbotron-title img {
+    max-width: 300px;
+  }
+}
+@media (min-width: 640px) {
+  #media-consulting .jumbotron-wrapper .jumbotron-title img {
+    max-width: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .jumbotron-wrapper .jumbotron-title img {
+    max-width: 400px;
+  }
+}
 #media-consulting .overview-wrapper {
   align-items: center;
   padding-top: 7rem;
@@ -1545,8 +1564,20 @@ html body.overflow-hidden {
   }
 }
 #media-consulting .introduce-wrapper {
-  margin-top: 10rem;
-  margin-bottom: 20rem;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  #media-consulting .introduce-wrapper {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .introduce-wrapper {
+    padding: 0;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+  }
 }
 #media-consulting .introduce-wrapper .introduce-title {
   display: flex;
@@ -1559,6 +1590,7 @@ html body.overflow-hidden {
 #media-consulting .introduce-wrapper .introduce-content {
   display: flex;
   flex-direction: column;
+  row-gap: 2rem;
   margin-top: 6rem;
 }
 @media (min-width: 1024px) {
@@ -1576,13 +1608,29 @@ html body.overflow-hidden {
 }
 #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-tagline {
   color: #003059;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-tagline {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-tagline {
+    font-size: 3rem;
+  }
 }
 #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-detail {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+@media (min-width: 1280px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-detail {
+    font-size: 1.5rem;
+  }
 }
 #media-consulting .introduce-wrapper .introduce-content .introduce-card .introduce-socmed {
   display: flex;
@@ -1604,7 +1652,19 @@ html body.overflow-hidden {
   width: 100%;
   height: 100%;
   border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+@media (min-width: 768px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-potrait > img {
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  #media-consulting .introduce-wrapper .introduce-content .introduce-potrait > img {
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 2rem;
+  }
 }
 #media-consulting #seasonal {
   background-color: rgba(0, 48, 89, 0.4);
@@ -1612,18 +1672,29 @@ html body.overflow-hidden {
   border-top-right-radius: 2rem;
 }
 #media-consulting #seasonal .seasonal-wrapper {
-  padding-top: 7.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
+}
+@media (min-width: 1024px) {
+  #media-consulting #seasonal .seasonal-wrapper {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+  }
 }
 #media-consulting #seasonal .seasonal-wrapper .seasonal-title {
   position: relative;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #003059;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  #media-consulting #seasonal .seasonal-wrapper .seasonal-title {
+    font-size: 3rem;
+  }
 }
 #media-consulting #seasonal .seasonal-wrapper .seasonal-title::after {
   content: "";
@@ -2066,23 +2137,26 @@ html body.overflow-hidden {
 #media-consulting .client-wrapper .client-more .client-list .client-item img {
   filter: grayscale(100%);
 }
-#media-consulting .marquee {
+#media-consulting .client-wrapper .client-more .client-list.marquee {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 8rem;
+  gap: 4rem;
+  overflow: hidden;
 }
-#media-consulting .marquee .marquee-item {
+#media-consulting .client-wrapper .client-more .client-list.marquee .marquee-item {
   white-space: nowrap;
   font-size: 1.25rem;
   font-weight: 500;
   animation: marquee-client 1000s linear infinite;
   transition: opacity 0.3s ease-in-out;
 }
-#media-consulting .marquee .marquee-item img {
+#media-consulting .client-wrapper .client-more .client-list.marquee .marquee-item img {
+  min-height: 100px;
   max-height: 150px;
+  object-fit: contain;
 }
-#media-consulting .marquee .marquee-item:hover {
+#media-consulting .client-wrapper .client-more .client-list.marquee .marquee-item:hover {
   opacity: 0.6;
 }
 #media-consulting .review-wrapper {
@@ -2278,9 +2352,10 @@ html body.overflow-hidden {
   background-color: #003059;
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category {
-  opacity: 1;
+  opacity: 0;
   height: auto;
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 #media-consulting .plan-wrapper .category-wrapper .plan-category.active {
   margin-top: 2rem;
@@ -2550,15 +2625,24 @@ html body.overflow-hidden {
   }
 }
 #media-consulting .contact-wrapper {
-  padding-top: 10rem;
   padding-bottom: 10rem;
+}
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper {
+    padding-top: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  #media-consulting .contact-wrapper {
+    padding-top: 10rem;
+  }
 }
 #media-consulting .contact-wrapper .contact-content {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #media-consulting .contact-wrapper .contact-content {
     flex-direction: row;
   }
@@ -2573,20 +2657,35 @@ html body.overflow-hidden {
   flex-direction: column;
   gap: 2rem;
   justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   box-shadow: 4px 4px 20px 7px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper .contact-content .contact-card {
+    padding: 2rem 3rem;
+  }
+}
 #media-consulting .contact-wrapper .contact-content .contact-card .contact-title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #003059;
   font-weight: 900;
 }
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper .contact-content .contact-card .contact-title {
+    font-size: 3rem;
+  }
+}
 #media-consulting .contact-wrapper .contact-content .contact-card .contact-detail {
   flex: 1 0 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (min-width: 1024px) {
+  #media-consulting .contact-wrapper .contact-content .contact-card .contact-detail {
+    font-size: 1.25rem;
+  }
 }
 #media-consulting .contact-wrapper .contact-content .contact-card .contact-detail > .open-hours {
   font-weight: 700;
@@ -2604,14 +2703,19 @@ html body.overflow-hidden {
   flex: 0 0 50%;
   box-shadow: 4px 4px 20px 7px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #media-consulting .contact-wrapper .contact-content .contact-maps {
     transform: scale(1.2);
   }
 }
 #media-consulting .contact-wrapper .contact-content .contact-maps > iframe {
   width: 100%;
-  height: 100%;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #media-consulting .contact-wrapper .contact-content .contact-maps > iframe {
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -92,13 +92,13 @@
       <section id="jumbotron">
         <div class="jumbotron-wrapper" style="background-image: url('./public/img/jumbotron/owned-vanue.jpg')">
           <h1 class="jumbotron-title">
-            <img src="./public/img/clients/logo/padma-white-logo.png" alt="" style="width: 50%" />
+            <img src="./public/img/clients/logo/padmasoc-white-logo.png" alt="Padma Logo">
           </h1>
         </div>
       </section>
 
       <section id="introduce">
-        <div class="introduce-wrapper"  data-aos="fade-left" data-aos-duration="1000">
+        <div class="introduce-wrapper"  data-aos="fade-right" data-aos-duration="1000">
           <div class="introduce-content">
             <div class="introduce-card">
               <p class="introduce-tagline">Your Daily Comfort Food</p>
@@ -238,7 +238,7 @@
                         <span class="name">Rina Wijaya</span>
                         <span class="company">PT. Maju Bersama</span>
                       </div>
-                      <div class="stars" data-value="4"></div>
+                      <div class="stars" data-value="5"></div>
                     </div>
                   </div>
                 </li>
@@ -252,7 +252,7 @@
                         <span class="name">Dewi Lestari</span>
                         <span class="company">PT. PT. Mitra Sejahtera</span>
                       </div>
-                      <div class="stars" data-value="3"></div>
+                      <div class="stars" data-value="5"></div>
                     </div>
                   </div>
                 </li>
@@ -266,7 +266,7 @@
                         <span class="name">Budi Santoso</span>
                         <span class="company">PT. Karya Sejahtera</span>
                       </div>
-                      <div class="stars" data-value="3"></div>
+                      <div class="stars" data-value="5"></div>
                     </div>
                   </div>
                 </li>
@@ -342,9 +342,7 @@
         </div>
       </div>
     </footer>
-    <div class="button-to-top">
-      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
+<a href="#" class="button-to-top"><i class="fa-solid fa-arrow-up"></i></a>
 
     <script src="./public/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -359,13 +357,22 @@
       document.addEventListener('DOMContentLoaded', () => {
         new Splide('#seasonal .seasonal-wrapper', {
           arrows: false,
-          perPage: 4,
+          perPage: 2,
           start: 1,
           focus: 'center',
           trimSpace: false,
           updateOnMove: true,
           isNavigation: true,
           mediaQuery: 'min',
+          breakpoints: {
+            640: {
+              perPage: 3,
+            },
+            768: {
+              perPage: 4,
+              start: 2,
+            }
+          }
         }).mount();
 
         new Splide('#review .review-wrapper', {
