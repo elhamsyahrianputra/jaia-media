@@ -2132,7 +2132,12 @@ html body.overflow-hidden {
   align-items: center;
 }
 #media-consulting .client-wrapper .client-more .client-list .client-item {
-  flex: 0 0 20%;
+  flex: 0 0 30%;
+}
+@media (min-width: 640px) {
+  #media-consulting .client-wrapper .client-more .client-list .client-item {
+    flex: 0 0 20%;
+  }
 }
 #media-consulting .client-wrapper .client-more .client-list .client-item img {
   filter: grayscale(100%);
@@ -2141,7 +2146,7 @@ html body.overflow-hidden {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 4rem;
+  gap: 5rem;
   overflow: hidden;
 }
 #media-consulting .client-wrapper .client-more .client-list.marquee .marquee-item {

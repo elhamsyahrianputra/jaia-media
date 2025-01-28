@@ -734,7 +734,11 @@
         align-items: center;
 
         .client-item {
-          flex: 0 0 20%;
+          flex: 0 0 30%;
+
+          @include media-query('sm') {
+            flex: 0 0 20%;
+          }
 
           img {
             filter: grayscale(100%);
@@ -745,7 +749,7 @@
           display: flex;
           align-items: center;
           flex-wrap: nowrap;
-          gap: 4rem;
+          gap: 5rem;
           overflow: hidden;
 
           .marquee-item {
