@@ -4,7 +4,7 @@
 @use 'sass:color';
 
 #footer {
-  color: darken($color: $white, $amount: 20);
+  color: color.adjust($white, $lightness: 20%);
   background-color: black;
   font-weight: 500;
 

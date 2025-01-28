@@ -614,7 +614,7 @@ html body.overflow-hidden {
 }
 
 #footer {
-  color: rgb(168.5714285714, 173.8095238095, 176.4285714286);
+  color: hsl(200, 4.7619047619%, 107.6470588235%);
   background-color: black;
   font-weight: 500;
 }

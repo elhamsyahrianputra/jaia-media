@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "watch" : "sass --watch ./src/sass/main.scss ./dist/css/main.css",
+    "build:minify": "sass ./src/sass/main.scss ./dist/css/main.min.css --style=compressed",
     "format" : "prettier --write './src/**/*.{scss,css}' ./*.html",
     "lint:style": "stylelint './src/**/*.{scss,css}'"
   },
